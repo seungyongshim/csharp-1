@@ -1,14 +1,14 @@
 using System;
 using Xunit;
+using static Sample.Prelude;
 
-namespace Sample.Tests
+namespace Sample.Tests;
+
+public class PreludeSpec
 {
-    public class UnitTest1
+    [Fact]
+    public void AddSuccess()
     {
-        [Fact]
-        public void Test1()
-        {
-            Assert.True(true);
-        }
+        Assert.Equal(3, add(1)(2));
     }
 }
